@@ -20,7 +20,7 @@
             header {
                 background: #333;
                 color: #fff;
-                padding-top: 30px;
+                padding: 30px 0;
                 min-height: 70px;
                 border-bottom: #77aaff 3px solid;
             }
@@ -43,30 +43,49 @@
             ul {
                 list-style-type: none;
                 padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
             }
             ul li {
                 background: #77aaff;
                 color: #fff;
-                padding: 10px;
-                margin: 5px 0;
+                padding: 15px 20px;
+                margin: 5px;
                 text-align: center;
                 border-radius: 5px;
+                flex: 1 1 calc(33% - 20px);
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition:
+                    transform 0.3s,
+                    box-shadow 0.3s;
+            }
+            ul li:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
             }
             .contact-info {
                 margin-top: 20px;
             }
             .contact-info p {
-                margin: 5px 0;
+                margin: 10px 0;
+                text-align: center;
             }
-            .contact-info strong {
+            .contact-info a {
+                color: #77aaff;
+                text-decoration: none;
                 font-weight: bold;
+            }
+            .contact-info a:hover {
+                text-decoration: underline;
             }
         </style>
     </head>
     <body>
         <header>
             <div class="container">
-                <h1>Services Provided</h1>
+                <h1>Software Development Services</h1>
             </div>
         </header>
         <section>
@@ -108,14 +127,17 @@
             <div class="container">
                 <h2>Contact Information</h2>
                 <p>
-                    <strong>Likedin Profile:</strong>
+                    <strong>LinkedIn Profile:</strong>
                     <a
                         href="https://linkedin.com/in/ionatan-frim"
                         target="_blank"
                         >linkedin.com/in/ionatan-frim</a
                     >
                 </p>
-                <p><strong>Phone:</strong> +40743687792 (Work)</p>
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:+40743687792">+40 743 687 792</a>
+                </p>
                 <p>
                     <strong>Email:</strong>
                     <a href="mailto:ionatan.frim.dev@gmail.com"
